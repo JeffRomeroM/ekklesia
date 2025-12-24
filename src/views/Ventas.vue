@@ -41,7 +41,7 @@
            :style="{ transform: hoveredCard === venta.id ? 'translateY(-5px) scale(1.03)' : 'translateY(0) scale(1)' }">
         <div class="card-body" @click="openModal(venta)">
           <p class="cliente"><i class="icon-user"></i> {{ venta.cliente }}</p>
-          <p><i class="icon-cash"></i> Recarga: C$ {{ venta.recarga }}</p>
+          <p><p class="icon-cash"></p> Recarga: C$ {{ venta.recarga }}</p>
           <p>💸 Monto: C$ {{ venta.monto }}</p>
           <p><i class="icon-credit-card"></i> {{ venta.tipo_pago }}</p>
           <p><i class="icon-trending-up"></i> Ganancia: C$ {{ venta.ganancia }}</p>
@@ -69,7 +69,7 @@
             <input v-model="form.cliente" placeholder="Cliente" required />
 
             <label>Recarga</label>
-            <input type="number" v-model.number="form.recarga" placeholder="Recarga" />
+            <input v-model.number="form.recarga" placeholder="Recarga" />
 
             <label>Monto</label>
             <input type="number" v-model.number="form.monto" placeholder="Monto" />
