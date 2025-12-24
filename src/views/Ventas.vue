@@ -210,6 +210,10 @@ onMounted(cargarVentas)
 
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;justify-content:center;align-items:center;z-index:1000;}
 .modal{background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);padding:1.5rem;border-radius:16px;width:90%;max-width:420px;display:flex;flex-direction:column;gap:0.6rem;}
+.modal input{
+  width: 90%;
+  margin-bottom: 9px;
+}
 .modal-actions{display:flex;justify-content:space-between;margin-top:1rem}
 .save{background:#4f46e5;color:#fff;transition:0.2s}.save:hover{background:#4338ca}
 .cancel{background:#e5e7eb;transition:0.2s}.cancel:hover{background:#d1d5db;}
