@@ -1,20 +1,13 @@
-<script setup>
-import Himnario from './views/Himnario.vue'
-import Menu from './components/Menu.vue';
-</script>
-
 <template>
-  <!-- <Menu/> -->
-  <section>
-    <Himnario />
-  </section>
- 
+  <div class="app">
+    <Menu />
+    <RouterView />
+  
+  </div>
 </template>
 
-<style scoped>
-section{
-  width: 100vw;
-  
-}
-</style>
+<script setup>
+import Menu from '../src/components/Menu.vue';
 
+
+</script>

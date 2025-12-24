@@ -8,24 +8,25 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'Ekklesia',
-        short_name: 'Ekklesia',
+        name: 'Valle',
+        short_name: 'Valle',
         start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',
         icons: [
-          {
-            src: 'Ekkelsia.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: 'Ekkelsia.png',
-            sizes: '512x512',
-            type: 'image/png'
-          }
+          { src: 'valle.png', sizes: '192x192', type: 'image/png' },
+          { src: 'valle.png', sizes: '512x512', type: 'image/png' }
         ]
       }
     })
-  ]
+  ],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://script.google.com/macros/s/AKfycbxJNweIxfw64CRx1shap292OcLTXsP2-Vmf9fskwbZZ_dKsDKv7Ru93Ua0JlUwrQHenVQ/exec',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  }
 })

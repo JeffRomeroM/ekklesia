@@ -9,6 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.89.0",
+    "appwrite": "^21.5.0",
+    "chart.js": "^4.5.0",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2",
     "vite-plugin-pwa": "^1.0.2",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
